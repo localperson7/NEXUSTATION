@@ -1,0 +1,17 @@
+[package]
+name = "nexustation"
+version = "0.1.0"
+edition = "2024"
+description = "NEXUSTATION v0.1 — NEXUS Ecosystem retro terminal arcade gaming console"
+license = "MIT"
+
+[dependencies]
+crossterm = "0.29"
+ratatui = "0.30"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+strip = "symbols"
